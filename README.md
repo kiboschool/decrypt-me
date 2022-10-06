@@ -1,4 +1,4 @@
-# Instructions  
+# Decrypt Me 
 
 Encryption and decryption play an important role in information security and computer science. It’s used everywhere to secure the transmitted data between two entities. 
 
@@ -21,7 +21,7 @@ To crack the code, you'll learn a little about how each of these work, and how t
 We intercepted a message that was nearly decrypted already. It was just backwards! Here's the message:
 `"edoc ot nrael ot tnaw I"`
 
-Click Run to see the backwards message printed out.
+Run the code to see the backwards message printed out.
 
 To flip the backwards message around and show the answer, you can use these two lines of code:
 
@@ -30,7 +30,7 @@ flipped_message = backwards_message[::-1]
 print("The flipped message is:", flipped_message)
 ```
 
-Copy and paste that where the comment tells you to, then press Run. You should see a line that says "The flipped message is:", followed by the flipped message.
+Copy and paste that where the comment tells you to, then run the code. You should see a line that says "The flipped message is:", followed by the flipped message.
 
 > `backwards_message[::-1]` is how to reverse a string in python.
 
@@ -49,11 +49,10 @@ decoded_message = base64.b64decode(  encoded_message.encode('ascii')).decode('as
 print("The decoded message is: ", decoded_message)
 ```
 
-Click run, and you should see the decoded message.
+Run the code, and you should see the decoded message.
 
 > We use python's built-in `base64` library to do most of the work. It knows how to translate to and from base64.
 > The other part of this snippet turns the _string_ into _bytes_ and back. It uses ASCII to turn each letter into a number.
-
 
 ### 3. Decrypting with a key
 
@@ -110,8 +109,6 @@ fully_decrypted_message = decoded[::-1]
 print("The full decrypted message is:", fully_decrypted_message)
 ```
 
-*Congratulations!* You decrypted the message. We hope you learned something from this challenge, and that you're excited to learn about how all this code works.
+Run the code a final time to see the message.
 
-## Submitting your work
-1. Click the "Submit" button on the top right
-2. [Click this link](https://kiboschool.notion.site/0-3-Assignment-48047353b5e147d4b2c1a53bbb2572f5) to fill out a form with the plain message you received at the end.
+*Congratulations!* You decrypted the message.
