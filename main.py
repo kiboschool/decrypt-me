@@ -13,7 +13,8 @@ print("--- Part 1 ---")
 backwards_message = "edoc ot nrael ot tnaw I"
 print("The backwards message is:", backwards_message)
 # TODO: Copy and paste the code to flip the message here
-
+flipped_message = backwards_message[::-1]
+print("The flipped message is:", flipped_message)
 
 ### Part 2
 ### Base64 decoding
@@ -22,7 +23,8 @@ print("\n--- Part 2 ---")
 encoded_message = "SSB3YW50IHRvIHdvcmsgdG9nZXRoZXI="
 print("The encoded message is", encoded_message)
 # TODO: Copy and paste the code to decode the message here
-
+decoded_message = base64.b64decode(  encoded_message.encode('ascii')).decode('ascii')
+print("The decoded message is: ", decoded_message)
 
 ### Part 3
 ### Decrypting with a key
@@ -32,7 +34,7 @@ encrypted = "N%|fsy%yt%rfpj%sj|%kwnjsix"
 print("The encrypted message is", encrypted)
 
 # TODO: Find the key that correctly decrypts the message
-key = 1
+key = 5
 print("Trying key:", key)
 
 decrypted = ""
@@ -51,10 +53,14 @@ full_secret_message = 'N\\>nfZxl^r6ugLRlg8VliL:mi~GONH:\x7f_L:qf]OrNMiqgnGqf7KyN
 print("The full secret message is", full_secret_message)
 
 # TODO: Decrypt the message with the key
-
+decrypted = ""
+for letter in full_secret_message:
+  decrypted += chr(ord(letter) - key)
 
 # TODO: Use base64 to decode the message
 
+decoded = base64.b64decode(decrypted.encode('ascii')).decode('ascii')
 
 # TODO: Reverse the message
-
+fully_decrypted_message = decoded[::-1]
+print("The full decrypted message is:", fully_decrypted_message)
